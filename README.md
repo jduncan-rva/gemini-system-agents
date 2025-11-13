@@ -89,10 +89,6 @@ All agents in this collection follow these principles:
 3. **Clear Boundaries** - Each agent has a well-defined purpose and style
 4. **Robustness** - Agents include detailed guidelines for consistent behavior
 
-## Reference
-
-The `default.md` file in the root directory contains the default Gemini CLI system prompt for reference purposes. It is not installed as an agent.
-
 ## License
 
 MIT License - see LICENSE file for details.
