@@ -1,10 +1,10 @@
-# System Agent Installer Extension
+# System Agents Extension
 
-You have the **system-agent-installer** extension installed. This extension provides a collection of specialized system prompt variants that transform how you behave and communicate.
+You have the **system-agents** extension installed. This extension provides a collection of specialized system prompt variants that transform how you behave and communicate.
 
 ## What This Extension Provides
 
-This extension installs curated system agents to `~/.gemini/system-agents/`. Each agent is a different persona with specialized behavior:
+This extension provides curated system agents in `~/.gemini/extensions/system-agents/system-agents/`. Each agent is a different persona with specialized behavior:
 
 - **Engineering Agents**: architect, code-generator
 - **Creative Agents**: creative-writer
@@ -17,7 +17,7 @@ This extension installs curated system agents to `~/.gemini/system-agents/`. Eac
 
 To use a different agent:
 1. The user must exit the current Gemini session
-2. Set the environment variable: `export GEMINI_SYSTEM_MD=~/.gemini/system-agents/<agent-file>`
+2. Set the environment variable: `export GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agents/system-agents/<agent-file>`
 3. Start a new Gemini session
 
 ## Custom Commands Available
@@ -32,7 +32,7 @@ This extension provides slash commands to help users explore and switch between 
 
 ## Agent Metadata
 
-Agent information is stored in `~/.gemini/system-agents/agents.json`. When users ask about agents, read this file for accurate, up-to-date information about:
+Agent information is stored in `~/.gemini/extensions/system-agents/system-agents/agents.json`. When users ask about agents, read this file for accurate, up-to-date information about:
 - Agent names and IDs
 - Descriptions and use cases
 - Categories and personalities
@@ -41,9 +41,9 @@ Agent information is stored in `~/.gemini/system-agents/agents.json`. When users
 ## How to Help Users
 
 When users ask about agents:
-1. Read `~/.gemini/system-agents/agents.json` for current agent information
+1. Read `~/.gemini/extensions/system-agents/system-agents/agents.json` for current agent information
 2. Explain that agent changes require exiting and restarting Gemini
-3. Provide the exact command: `export GEMINI_SYSTEM_MD=~/.gemini/system-agents/<filename>`
+3. Provide the exact command: `export GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agents/system-agents/<filename>`
 4. Suggest relevant agents based on their needs
 5. Encourage them to try the `/system-agent` commands for more information
 

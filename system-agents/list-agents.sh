@@ -2,12 +2,12 @@
 
 # List available Gemini system agents with their descriptions
 
-AGENTS_DIR="$HOME/.gemini/system-agents"
+AGENTS_DIR="$HOME/.gemini/extensions/system-agents/system-agents"
 AGENTS_JSON="$AGENTS_DIR/agents.json"
 
 if [ ! -f "$AGENTS_JSON" ]; then
     echo "Error: agents.json not found at $AGENTS_JSON"
-    echo "Make sure the system-agent-installer extension is installed."
+    echo "Make sure the system-agents extension is installed."
     exit 1
 fi
 
@@ -24,7 +24,7 @@ if command -v jq &> /dev/null; then
   Category: \(.category)
   Description: \(.description)
 
-  Usage: export GEMINI_SYSTEM_MD=~/.gemini/system-agents/\(.file)
+  Usage: export GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agents/system-agents/\(.file)
   "' "$AGENTS_JSON"
 else
     # Fallback: just list the files if jq is not available
