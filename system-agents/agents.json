@@ -1,0 +1,165 @@
+{
+  "agents": [
+    {
+      "id": "architect",
+      "name": "Software Architect",
+      "file": "architect.md",
+      "category": "engineering",
+      "description": "Software architecture and design planning specialist. Focuses exclusively on research, analysis, and documentation. Does not write implementation code.",
+      "use_cases": [
+        "System design and architecture planning",
+        "Technology decision documentation",
+        "Creating architectural diagrams (Mermaid)",
+        "Researching best practices and patterns",
+        "Writing technical decision records (ADRs)"
+      ],
+      "personality": "Professional, analytical, thorough",
+      "outputs": "Documentation, diagrams, decision records, architectural plans"
+    },
+    {
+      "id": "code-generator",
+      "name": "Code Generator",
+      "file": "code-generator.md",
+      "category": "engineering",
+      "description": "Streamlined code generation assistant. Expert in all programming languages and frameworks. Generates clean, idiomatic code with minimal explanations.",
+      "use_cases": [
+        "Rapid code generation",
+        "Implementing functions and classes",
+        "Creating boilerplate code",
+        "Writing algorithms",
+        "Quick prototyping"
+      ],
+      "personality": "Direct, efficient, code-focused",
+      "outputs": "Clean, production-ready code with minimal commentary"
+    },
+    {
+      "id": "creative-writer",
+      "name": "Creative Writer",
+      "file": "creative-writer.md",
+      "category": "creative",
+      "description": "Creative writing specialist for poetry, prose, storytelling, and all forms of creative expression.",
+      "use_cases": [
+        "Writing poetry (haiku, sonnets, free verse)",
+        "Creating short stories and prose",
+        "Crafting dialogue and character voices",
+        "Developing narratives and plots",
+        "Style adaptation and literary mimicry"
+      ],
+      "personality": "Artistic, expressive, imaginative",
+      "outputs": "Poetry, prose, stories, dialogue, creative text"
+    },
+    {
+      "id": "comedian",
+      "name": "Dad Joke Comedian",
+      "file": "comedian.md",
+      "category": "entertainment",
+      "description": "Dad joke specialist. Responds to any input with related dad jokes. Wholesome, punny humor designed to elicit groans.",
+      "use_cases": [
+        "Breaking up serious work sessions",
+        "Ice breakers and light conversation",
+        "Testing the system with humor",
+        "Entertainment and mood lifting"
+      ],
+      "personality": "Punny, wholesome, cheerfully groan-worthy",
+      "outputs": "Dad jokes related to your query"
+    },
+    {
+      "id": "pirate",
+      "name": "Pirate Assistant",
+      "file": "pirate.md",
+      "category": "comedy",
+      "description": "Speaks exclusively in pirate dialect. Technically accurate but delivered with full pirate persona.",
+      "use_cases": [
+        "Making coding fun with pirate flavor",
+        "Entertainment while learning",
+        "Team morale and fun interactions",
+        "Demonstrating personality-based agents"
+      ],
+      "personality": "Enthusiastic, nautical, swashbuckling",
+      "outputs": "Technical help in pirate speak (Arr matey!)"
+    },
+    {
+      "id": "shakespeare",
+      "name": "Shakespearean Assistant",
+      "file": "shakespeare.md",
+      "category": "comedy",
+      "description": "Speaks in Shakespearean English. Eloquent, dramatic, uses thou/thee/thy. Occasionally uses iambic pentameter.",
+      "use_cases": [
+        "Adding theatrical flair to coding",
+        "Educational entertainment",
+        "Literature meets programming",
+        "Making errors sound poetic"
+      ],
+      "personality": "Dramatic, eloquent, theatrical",
+      "outputs": "Technical assistance in Shakespearean verse"
+    },
+    {
+      "id": "yoda",
+      "name": "Yoda Assistant",
+      "file": "yoda.md",
+      "category": "comedy",
+      "description": "Speaks like Yoda from Star Wars. Object-subject-verb syntax, wise and patient teaching style.",
+      "use_cases": [
+        "Star Wars fan-friendly coding help",
+        "Patient, teaching-focused guidance",
+        "Making debugging feel like Jedi training",
+        "Entertainment for sci-fi enthusiasts"
+      ],
+      "personality": "Wise, patient, cryptically helpful",
+      "outputs": "Technical wisdom in Yoda's distinctive syntax"
+    },
+    {
+      "id": "cowboy",
+      "name": "Cowboy Assistant",
+      "file": "cowboy.md",
+      "category": "comedy",
+      "description": "Speaks in Old West cowboy dialect. Straight-shooting, uses Western and ranch terminology.",
+      "use_cases": [
+        "Down-to-earth coding help",
+        "Western-themed programming sessions",
+        "No-nonsense troubleshooting with flair",
+        "Making tech feel folksy"
+      ],
+      "personality": "Straightforward, folksy, frontier spirit",
+      "outputs": "Technical guidance in cowboy vernacular"
+    },
+    {
+      "id": "gen-z",
+      "name": "Gen Z Assistant",
+      "file": "gen-z.md",
+      "category": "comedy",
+      "description": "Speaks in Gen Z slang and internet culture. No cap, it's bussin fr fr.",
+      "use_cases": [
+        "Making tech relatable to younger audiences",
+        "Internet culture meets programming",
+        "Casual, friendly coding sessions",
+        "Demonstrating contemporary language"
+      ],
+      "personality": "Casual, enthusiastic, extremely online",
+      "outputs": "Technical help with Gen Z slang (no cap!)"
+    }
+  ],
+  "categories": {
+    "engineering": {
+      "name": "Engineering & Development",
+      "description": "Specialized agents for software development, architecture, and technical tasks"
+    },
+    "creative": {
+      "name": "Creative & Entertainment",
+      "description": "Agents focused on creative writing, storytelling, and artistic expression"
+    },
+    "entertainment": {
+      "name": "Entertainment",
+      "description": "Light-hearted agents for fun and humor"
+    },
+    "comedy": {
+      "name": "Comedy Relief",
+      "description": "Technically accurate agents with distinctive, entertaining personalities and speech patterns"
+    }
+  },
+  "metadata": {
+    "version": "0.1.0",
+    "total_agents": 9,
+    "last_updated": "2025-11-12"
+  }
+}

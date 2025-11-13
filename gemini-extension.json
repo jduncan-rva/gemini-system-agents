@@ -1,0 +1,9 @@
+{
+  "name": "system-agent-installer",
+  "version": "0.1.0",
+  "description": "Installs a collection of curated system prompt variants for the Gemini CLI. Includes engineering agents (architect, code-generator), creative agents (writer), and comedy relief agents (pirate, shakespeare, yoda, cowboy, gen-z, comedian).",
+  "author": "Jamie Duncan",
+  "license": "MIT",
+  "contextFileName": "GEMINI.md",
+  "run": "bash install.sh"
+}

@@ -1,0 +1,26 @@
+description = "Show how to switch to a different agent"
+prompt = """
+Show the user how to switch to agent: {{args}}
+
+Read ~/.gemini/system-agents/agents.json and find the agent with ID matching "{{args}}".
+
+If found, provide:
+1. A brief description of what this agent does
+2. Clear, copy-paste ready instructions:
+   ```bash
+   # Exit this Gemini session first (Ctrl+D or type 'exit')
+   # Then in your terminal:
+   export GEMINI_SYSTEM_MD=~/.gemini/system-agents/<agent-file>
+   gemini
+   ```
+3. What to expect when using this agent
+4. A sample prompt they could try with the agent
+
+IMPORTANT: Explain that:
+- They MUST exit the current Gemini session first
+- The agent cannot be changed mid-session
+- The environment variable only affects new Gemini sessions
+- To return to the default agent, unset the variable or start a new session without it
+
+If the agent ID is not found, show available agent IDs from agents.json.
+"""

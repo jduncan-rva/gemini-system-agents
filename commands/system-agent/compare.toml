@@ -1,0 +1,27 @@
+description = "Compare different agents to help choose the right one"
+prompt = """
+Compare system agents to help the user choose the right one for their task.
+
+If {{args}} contains multiple agent IDs (space or comma separated), compare those specific agents.
+Otherwise, provide a comparison guide of the main agent categories.
+
+Read ~/.gemini/system-agents/agents.json for agent information.
+
+When comparing specific agents:
+1. Show side-by-side comparison of their strengths
+2. Use cases where each excels
+3. Key personality differences
+4. Output style differences
+5. Recommendation based on common tasks
+
+When showing general guidance:
+1. **Engineering Tasks** → architect vs code-generator
+2. **Creative Work** → creative-writer
+3. **Learning/Fun** → comedy agents (pirate, yoda, shakespeare, etc.)
+4. **Quick Code** → code-generator
+5. **Planning/Design** → architect
+
+Format as a decision tree or comparison table.
+
+End with: "Try `/system-agent:switch <agent-id>` to see how to activate an agent"
+"""
