@@ -2,7 +2,7 @@ description = "List all available system agents with descriptions"
 prompt = """
 List all available system agents from the system-agent-installer extension.
 
-Read the agents.json file from ~/.gemini/system-agents/agents.json and display:
+Read the agents.json file from ~/.gemini/extensions/system-agent-installer/system-agents/agents.json and display:
 
 1. A categorized list of all agents
 2. Each agent's name, file, and brief description
@@ -12,7 +12,7 @@ Format the output clearly with:
 - Category headers
 - Agent names and IDs
 - One-line descriptions
-- Usage example for each: `export GEMINI_SYSTEM_MD=~/.gemini/system-agents/<filename>`
+- Usage example for each: `export GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agent-installer/system-agents/<filename>`
 
 Remind users that they must exit this Gemini session and start a new one with the exported variable to use a different agent.
 """

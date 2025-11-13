@@ -4,7 +4,7 @@ A curated collection of system prompt variants for the Gemini CLI. Transform you
 
 ## What is This?
 
-This is a Gemini CLI extension that installs a variety of pre-configured system prompts. Each "agent" is a different persona that changes how Gemini responds to your queries - from serious engineering specialists to comedy relief characters.
+This is a Gemini CLI extension that provides a variety of pre-configured system prompts. Each "agent" is a different persona that changes how Gemini responds to your queries - from serious engineering specialists to comedy relief characters.
 
 ## Installation
 
@@ -14,7 +14,7 @@ Install via the Gemini CLI extension system:
 gemini extensions install https://github.com/jduncan-rva/gemini-system-agents
 ```
 
-This will install all agent prompts to `~/.gemini/system-agents/`.
+This clones the extension to `~/.gemini/extensions/system-agent-installer/`. All agent prompts are available in the `system-agents/` subdirectory.
 
 ## Available Agents
 
@@ -47,7 +47,7 @@ This will install all agent prompts to `~/.gemini/system-agents/`.
 To use an agent, set the `GEMINI_SYSTEM_MD` environment variable:
 
 ```bash
-export GEMINI_SYSTEM_MD=~/.gemini/system-agents/architect.md
+export GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agent-installer/system-agents/architect.md
 gemini
 ```
 
@@ -55,21 +55,21 @@ gemini
 
 ```bash
 # Use the architect agent for system design
-export GEMINI_SYSTEM_MD=~/.gemini/system-agents/architect.md
+export GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agent-installer/system-agents/architect.md
 gemini
 
 # Use the code generator for quick code snippets
-export GEMINI_SYSTEM_MD=~/.gemini/system-agents/code-generator.md
+export GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agent-installer/system-agents/code-generator.md
 gemini
 
 # Use pirate agent for fun while coding
-export GEMINI_SYSTEM_MD=~/.gemini/system-agents/pirate.md
+export GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agent-installer/system-agents/pirate.md
 gemini
 ```
 
 ## Creating Custom Agents
 
-You can create your own system prompts by adding `.md` files to `~/.gemini/system-agents/`. Each file should contain a complete system prompt that defines:
+You can create your own system prompts by adding `.md` files to `~/.gemini/extensions/system-agent-installer/system-agents/`. Each file should contain a complete system prompt that defines:
 
 - The agent's core behavior and personality
 - How it should respond to user queries
