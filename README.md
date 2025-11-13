@@ -11,8 +11,7 @@ This is a Gemini CLI extension that installs a variety of pre-configured system 
 Install via the Gemini CLI extension system:
 
 ```bash
-# Installation command will be specific to how Gemini CLI handles extensions
-# Check Gemini CLI documentation for extension installation
+gemini extensions install https://github.com/jduncan-rva/gemini-system-agents
 ```
 
 This will install all agent prompts to `~/.gemini/system-agents/`.
