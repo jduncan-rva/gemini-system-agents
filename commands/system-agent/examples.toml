@@ -1,29 +1,3 @@
 description = "Show example prompts and use cases for agents"
-prompt = """
-Show practical example prompts and use cases for system agents.
+prompt = "!{system-agents/agent-examples.sh {{args}}}"
 
-If {{args}} is provided, show examples specific to that agent ID. Otherwise, show a curated selection of examples across different agent categories.
-
-Read ~/.gemini/system-agents/agents.json for agent information.
-
-For each agent shown, provide:
-1. Agent name and what makes it unique
-2. 2-3 concrete example prompts that showcase the agent
-3. Expected output style
-4. Best use cases
-
-Format like:
-**Agent: Architect**
-Example prompts:
-- "Design a microservices architecture for an e-commerce platform"
-- "Create an ADR for choosing between REST and GraphQL"
-Expected: Detailed diagrams, decision records, no implementation code
-
-**Agent: Pirate**
-Example prompts:
-- "How do I fix this null pointer exception?"
-- "Help me write a binary search algorithm"
-Expected: Technically correct answers in pirate dialect (Arr matey!)
-
-Make the examples practical and fun. Show the personality of each agent.
-"""
