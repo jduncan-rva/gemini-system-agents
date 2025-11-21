@@ -1,3 +1,3 @@
 description = "Show how to switch to a different agent"
-prompt = "!{system-agents/switch-agent.sh {{args}}}"
+prompt = "bash -c './system-agents/switch-agent.sh {{args}}'"
 

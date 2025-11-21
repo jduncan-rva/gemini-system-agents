@@ -1,6 +1,6 @@
 {
   "name": "system-agents",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A collection of curated system prompt variants for the Gemini CLI. Includes engineering agents (architect, code-generator), creative agents (writer), and comedy relief agents (pirate, shakespeare, yoda, cowboy, gen-z, comedian).",
   "author": "Jamie Duncan <jamieduncan@google.com>",
   "license": "MIT",
