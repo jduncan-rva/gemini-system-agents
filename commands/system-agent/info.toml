@@ -1,13 +1,14 @@
 description = "Show detailed information about a specific agent"
 prompt = """
-First, read the agent registry file at ${extensionPath}/system-agents/agents.json.
+First, read the system agent registry file at ${extensionPath}/system-agents/agents.json.
+Then, attempt to read the custom agent registry file at ${extensionPath}/custom/agents.json. If it does not exist, treat it as empty.
 
-Task: Find the agent with ID '{{args}}' in the provided JSON.
+Task: Find the agent with ID '{{args}}' by searching both registries.
 Display the full details for this agent, including:
 - Name & Category
 - Description
 - Personality
 - Use Cases (bullet points)
-- **Switch Command**: `export GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agents/system-agents/<file>`
+- **Switch Command**: `export GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agents/system-agents/<file>` (Adjust path for custom agents if applicable)
 """
 

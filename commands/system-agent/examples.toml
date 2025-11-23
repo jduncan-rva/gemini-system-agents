@@ -1,9 +1,10 @@
 description = "Show example prompts and use cases for agents"
 prompt = """
-First, read the agent registry file at ${extensionPath}/system-agents/agents.json.
+First, read the system agent registry file at ${extensionPath}/system-agents/agents.json.
+Then, attempt to read the custom agent registry file at ${extensionPath}/custom/agents.json. If it does not exist, treat it as empty.
 
-Task: Provide example prompts and use cases for the agent '{{args}}'.
-If no agent is specified in '{{args}}', pick 3 diverse agents to demonstrate.
+Task: Provide example prompts and use cases for the agent '{{args}}' by searching both registries.
+If no agent is specified in '{{args}}', pick 3 diverse agents (from both system and custom) to demonstrate.
 Use the 'use_cases' field in the JSON as a base to generate specific, copy-pasteable example prompts.
 """
 

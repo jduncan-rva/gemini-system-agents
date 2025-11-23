@@ -1,19 +1,20 @@
 description = "Show how to switch to a different agent"
 prompt = """
-First, read the agent registry file at ${extensionPath}/system-agents/agents.json.
+First, read the system agent registry file at ${extensionPath}/system-agents/agents.json.
+Then, attempt to read the custom agent registry file at ${extensionPath}/custom/agents.json. If it does not exist, treat it as empty.
 
 Task: Provide instructions to switch to agent '{{args}}'.
 
-1. Find '{{args}}' in the JSON to get its filename.
-2. Provide three methods to switch:
+1. Find '{{args}}' in the merged agent list. Note if it's from 'system-agents' or 'custom'.
+2. Provide three methods to switch, adjusting the path to the agent's Markdown file based on its origin (system-agents/ or custom/):
    a) **Session Export** (Current method):
-      `export GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agents/system-agents/<filename>`
+      `export GEMINI_SYSTEM_MD=${extensionPath}/<agent_origin>/<filename>`
       (Requires restart)
    
    b) **Immediate One-off**:
-      `GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agents/system-agents/<filename> gemini`
+      `GEMINI_SYSTEM_MD=${extensionPath}/<agent_origin>/<filename> gemini`
       
    c) **Permanent Alias** (Add to .zshrc/.bashrc):
-      `alias gemini-<agent>= "GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agents/system-agents/<filename> gemini"`
+      `alias gemini-<agent>= "GEMINI_SYSTEM_MD=${extensionPath}/<agent_origin>/<filename> gemini"`
 """
 
