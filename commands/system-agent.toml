@@ -1,6 +1,6 @@
 description = "List all available system agents with descriptions"
 prompt = """
-Context: @${extensionPath}/system-agents/agents.json
+First, read the agent registry file at ${extensionPath}/system-agents/agents.json.
 
 Task: List all available system agents from the provided JSON context.
 Format the output as a clean, readable list.

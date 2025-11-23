@@ -1,6 +1,6 @@
 description = "Show detailed information about a specific agent"
 prompt = """
-Context: @${extensionPath}/system-agents/agents.json
+First, read the agent registry file at ${extensionPath}/system-agents/agents.json.
 
 Task: Find the agent with ID '{{args}}' in the provided JSON.
 Display the full details for this agent, including:

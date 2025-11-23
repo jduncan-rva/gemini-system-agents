@@ -1,6 +1,6 @@
 description = "Show example prompts and use cases for agents"
 prompt = """
-Context: @${extensionPath}/system-agents/agents.json
+First, read the agent registry file at ${extensionPath}/system-agents/agents.json.
 
 Task: Provide example prompts and use cases for the agent '{{args}}'.
 If no agent is specified in '{{args}}', pick 3 diverse agents to demonstrate.

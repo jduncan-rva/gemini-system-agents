@@ -1,6 +1,6 @@
 description = "Show how to switch to a different agent"
 prompt = """
-Context: @${extensionPath}/system-agents/agents.json
+First, read the agent registry file at ${extensionPath}/system-agents/agents.json.
 
 Task: Provide instructions to switch to agent '{{args}}'.
 
