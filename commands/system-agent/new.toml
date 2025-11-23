@@ -1,0 +1,18 @@
+description = "Create and register a new system agent based on your description"
+prompt = """
+Context: @${extensionPath}/system-agents/agents.json
+
+Task: Create a new system agent based on the user's description: "{{args}}".
+
+You must perform the following actions using your tools:
+
+1.  **Analyze Request**: Determine a unique `id`, `name`, `category` (engineering, creative, entertainment, or comedy), and `description` for the new agent.
+2.  **Generate Content**: Create the system prompt content in Markdown format. It should define the persona, style, and constraints.
+3.  **Write File**: Use the `write_file` tool to save this content to `${extensionPath}/system-agents/<id>.md`.
+4.  **Update Registry**:
+    - Read the existing registry at `${extensionPath}/system-agents/agents.json`.
+    - Append the new agent's metadata to the `agents` array. Ensure the JSON structure matches the existing format.
+    - Write the updated JSON back to the file.
+
+Finally, confirm the creation and provide the command to switch to the new agent.
+"""

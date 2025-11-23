@@ -3,8 +3,17 @@ prompt = """
 Context: @${extensionPath}/system-agents/agents.json
 
 Task: Provide instructions to switch to agent '{{args}}'.
+
 1. Find '{{args}}' in the JSON to get its filename.
-2. Output the exact export command: `export GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agents/system-agents/<filename>`
-3. Remind the user they must **exit** the current session and start a new one for the change to take effect.
+2. Provide three methods to switch:
+   a) **Session Export** (Current method):
+      `export GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agents/system-agents/<filename>`
+      (Requires restart)
+   
+   b) **Immediate One-off**:
+      `GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agents/system-agents/<filename> gemini`
+      
+   c) **Permanent Alias** (Add to .zshrc/.bashrc):
+      `alias gemini-<agent>= "GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agents/system-agents/<filename> gemini"`
 """
 
