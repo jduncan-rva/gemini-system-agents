@@ -1,3 +1,9 @@
 description = "Show example prompts and use cases for agents"
-prompt = "bash -c './system-agents/agent-examples.sh {{args}}'"
+prompt = """
+Context: @${extensionPath}/system-agents/agents.json
+
+Task: Provide example prompts and use cases for the agent '{{args}}'.
+If no agent is specified in '{{args}}', pick 3 diverse agents to demonstrate.
+Use the 'use_cases' field in the JSON as a base to generate specific, copy-pasteable example prompts.
+"""
 

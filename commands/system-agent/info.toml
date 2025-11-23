@@ -1,3 +1,13 @@
 description = "Show detailed information about a specific agent"
-prompt = "bash -c './system-agents/agent-info.sh {{args}}'"
+prompt = """
+Context: @${extensionPath}/system-agents/agents.json
+
+Task: Find the agent with ID '{{args}}' in the provided JSON.
+Display the full details for this agent, including:
+- Name & Category
+- Description
+- Personality
+- Use Cases (bullet points)
+- **Switch Command**: `export GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agents/system-agents/<file>`
+"""
 

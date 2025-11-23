@@ -1,3 +1,0 @@
-description = "Compare different agents to help choose the right one"
-prompt = "bash -c './system-agents/compare-agents.sh {{args}}'"
-

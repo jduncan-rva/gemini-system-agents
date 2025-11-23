@@ -1,3 +1,10 @@
 description = "Show how to switch to a different agent"
-prompt = "bash -c './system-agents/switch-agent.sh {{args}}'"
+prompt = """
+Context: @${extensionPath}/system-agents/agents.json
+
+Task: Provide instructions to switch to agent '{{args}}'.
+1. Find '{{args}}' in the JSON to get its filename.
+2. Output the exact export command: `export GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agents/system-agents/<filename>`
+3. Remind the user they must **exit** the current session and start a new one for the change to take effect.
+"""
 

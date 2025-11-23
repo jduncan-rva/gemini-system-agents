@@ -1,3 +1,13 @@
 description = "List all available system agents with descriptions"
-prompt = "bash -c './system-agents/list-agents.sh'"
+prompt = """
+Context: @${extensionPath}/system-agents/agents.json
+
+Task: List all available system agents from the provided JSON context.
+Format the output as a clean, readable list.
+For each agent, show:
+- **ID** (for commands)
+- **Name**
+- **Category**
+- **Description**
+"""
 
