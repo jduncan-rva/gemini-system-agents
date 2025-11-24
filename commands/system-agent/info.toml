@@ -1,7 +1,8 @@
 description = "Show detailed information about a specific agent"
 prompt = """
-First, read the system agent registry file at ${extensionPath}/system-agents/agents.json.
-Then, attempt to read the custom agent registry file at ${extensionPath}/custom/agents.json. If it does not exist, treat it as empty.
+First, read the system agent registry file using `run_shell_command` with `cat ${extensionPath}/system-agents/agents.json`. **Do not use `read_file`.**
+
+Then, attempt to read the custom agent registry file using `run_shell_command` with `cat ${extensionPath}/custom/agents.json`.
 
 Task: Find the agent with ID '{{args}}' by searching both registries.
 Display the full details for this agent, including:

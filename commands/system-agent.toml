@@ -1,7 +1,8 @@
 description = "List all available system agents with descriptions"
 prompt = """
-First, read the system agent registry file at ${extensionPath}/system-agents/agents.json.
-Then, attempt to read the custom agent registry file at ${extensionPath}/custom/agents.json. If it does not exist, treat it as empty.
+First, read the system agent registry file using `run_shell_command` with `cat ${extensionPath}/system-agents/agents.json`. **Do not use `read_file` as it is restricted to the workspace.**
+
+Then, attempt to read the custom agent registry file using `run_shell_command` with `cat ${extensionPath}/custom/agents.json`. If the command fails (file doesn't exist), treat it as empty.
 
 Task: List all available system agents by merging the agents from both registries.
 Format the output as a clean, readable list. Clearly indicate which agents are 'Built-in' and which are 'Custom'.
