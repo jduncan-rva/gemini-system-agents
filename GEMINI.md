@@ -20,6 +20,9 @@ To use a different agent:
 2. Set the environment variable: `export GEMINI_SYSTEM_MD=~/.gemini/extensions/system-agents/system-agents/<agent-file>`
 3. Start a new Gemini session
 
+To restore the default behavior:
+1. Unset the environment variable: `export GEMINI_SYSTEM_MD=`
+
 ## Custom Commands Available
 
 This extension provides slash commands to help users explore and switch between agents:
